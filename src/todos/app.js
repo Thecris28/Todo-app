@@ -29,11 +29,29 @@ export const App = (elementId) => {
 
     // Referencias HTML
     const newDescription = document.querySelector( ElementIDs.NewTodo);
+    const todoListener= document.querySelector(ElementIDs.TodoList);
+
     newDescription.addEventListener('keyup', (event)=> {
         if (event.keyCode !== 13) return;
         if (event.target.value.trim().length === 0 ) return;
         
         todoStore.addTodo( event.target.value );
         displayTodos();
+        event.target.value = '';
+    })
+
+    todoListener.addEventListener('click', (event) => {
+        const element = event.target.closest('[data-id]')
+        todoStore.toggleTodo(element.getAttribute('data-id'))
+        displayTodos()
+    })
+
+    todoListener.addEventListener('click', (event) => {
+        const isDestroyElement = event.target.className ==='destroy';
+        const element = event.target.closest('[data-id]')
+        if (!isDestroyElement || !element) return;
+
+        todoStore.deleteTodo(element.getAttribute('data-id'))
+        displayTodos()
     })
 }
