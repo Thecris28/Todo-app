@@ -1,7 +1,9 @@
-Todo app desarrollada con vite
+# Todo app desarrollada con vite
 
 Para ejecutar en en local :
 
-Clonar repositorio git clone 
-Ejecutar npm install
-Ejecutar npm run dev para correr en desarrollo
+1. Clonar repositorio ``` git clone ```
+2. Ejecutar ``` npm install ``` 
+3. Ejecutar ``` npm run dev ```
+4. Ahora ya puedes visualizar la app en modo desarrollador
+ 
