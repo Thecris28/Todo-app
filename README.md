@@ -1,6 +1,6 @@
 # Todo app desarrollada con vite
 
-Para ejecutar en en local :
+Para ejecutar en local :
 
 1. Clonar repositorio ``` git clone ```
 2. Ejecutar ``` npm install ``` 
